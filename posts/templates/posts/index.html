@@ -1,0 +1,12 @@
+<!-- This is responsible for displaying our data in index.php-->
+{%extends 'posts/layout.html'%}
+{%block content%}
+<!--Binding the template to the view -->
+<h1>{{title}}</h1>
+<!--jinja templating with django -->
+<ul>
+{%for posts in posts%}
+<li><a href="/posts/details/{{posts.id}}">{{posts.title}}</a></li>
+{% endfor %}
+</ul>
+{%endblock%}

@@ -1,0 +1,16 @@
+<!-- This is responsible for displaying our data in index.php-->
+{%extends 'posts/layout.html'%}
+{%block content%}
+<!--Binding the template to the view -->
+<h1>{{posts.title}}</h1>
+<!--jinja templating with django -->
+<div>
+<h1>{{posts.body}}</h1>
+</div>
+<div>
+<h1>{{posts.created_at}}</h1>
+</div>
+<div>
+<a href="/posts">Go Back</a>
+</div>
+{%endblock%}
